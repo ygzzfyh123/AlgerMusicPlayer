@@ -15,10 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: 'pnpm'
 
       - name: 创建环境变量文件
         run: |
@@ -28,10 +34,10 @@ jobs:
           cat .env.production.local # 查看创建的文件内容，调试用
 
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Deploy to Server
         uses: appleboy/scp-action@master
