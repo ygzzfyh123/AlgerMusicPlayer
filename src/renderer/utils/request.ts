@@ -1,9 +1,10 @@
 import axios, { InternalAxiosRequestConfig } from 'axios';
 
+import * as StandaloneApi from '@/services/StandaloneNeteaseApi';
 import { useUserStore } from '@/store/modules/user';
 
-import { getSetData, isElectron, isMobile } from '.';
-import * as StandaloneApi from '@/services/StandaloneNeteaseApi';
+import { getSetData, isElectron } from '.';
+import { getCurrentApiConfig, isMobileEnvironment, mobileCache } from './mobileConfig';
 
 let setData: any = null;
 
@@ -13,13 +14,24 @@ interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   noRetry?: boolean;
 }
 
-const baseURL = window.electron
-  ? `http://127.0.0.1:${setData?.musicApiPort}`
-  : import.meta.env.VITE_API;
+// 初始化 baseURL（动态，在请求时重新计算）
+const getBaseURL = () => {
+  setData = getSetData();
+
+  // 移动端始终使用本地地址
+  if (isMobileEnvironment()) {
+    return 'http://127.0.0.1:30488';
+  }
+
+  if (window.electron) {
+    return `http://127.0.0.1:${setData?.musicApiPort || 30488}`;
+  }
+  return setData?.customApiUrl || import.meta.env.VITE_API || 'http://127.0.0.1:30488';
+};
 
 const request = axios.create({
-  baseURL,
-  timeout: 15000,
+  baseURL: 'http://127.0.0.1:30488', // 默认本地降级地址
+  timeout: 30000, // 移动端延长超时时间
   withCredentials: true
 });
 
@@ -34,7 +46,12 @@ async function handleStandaloneRequest(config: CustomAxiosRequestConfig) {
   try {
     let result: any;
     if (url === '/cloudsearch' || url === '/search') {
-      result = await StandaloneApi.search(params.keywords, params.type, params.limit, params.offset);
+      result = await StandaloneApi.search(
+        params.keywords,
+        params.type,
+        params.limit,
+        params.offset
+      );
     } else if (url === '/playlist/detail') {
       result = await StandaloneApi.playlistDetail(params.id);
     } else if (url === '/song/detail') {
@@ -60,7 +77,7 @@ async function handleStandaloneRequest(config: CustomAxiosRequestConfig) {
       const weapiUrl = url.startsWith('/') ? url : `/${url}`;
       result = await StandaloneApi.standaloneRequest(weapiUrl, { ...params, ...data });
     }
-    
+
     return {
       data: result,
       status: 200,
@@ -75,34 +92,113 @@ async function handleStandaloneRequest(config: CustomAxiosRequestConfig) {
 }
 
 // 最大重试次数
-const MAX_RETRIES = 1;
+const MAX_RETRIES = isMobileEnvironment() ? 3 : 1;
 // 重试延迟（毫秒）
-const RETRY_DELAY = 500;
+const RETRY_DELAY = isMobileEnvironment() ? 1000 : 500;
 
 // 请求拦截器
 request.interceptors.request.use(
   async (config: CustomAxiosRequestConfig) => {
     setData = getSetData();
-    
-    // 如果是移动端且没有配置自定义服务器，或者远程服务器已到期（这里假设 VITE_API 挂了）
-    // 我们优先使用 Standalone 模式
-    if (!isElectron && !setData?.customApiUrl) {
-       // 拦截部分核心 API 并走 Standalone
-       const standaloneUrls = [
-         '/cloudsearch', '/search', '/playlist/detail', '/song/detail', 
-         '/song/url/v1', '/lyric/new', '/lyric', '/search/suggest'
-       ];
-       if (standaloneUrls.some(u => config.url?.includes(u))) {
-         config.adapter = async (c) => {
-           const res = await handleStandaloneRequest(c);
-           return res as any;
-         };
-       }
+
+    // 更新 baseURL（动态计算）
+    config.baseURL = getBaseURL();
+
+    // 移动端配置
+    const isMobileEnv = isMobileEnvironment();
+    const apiConfig = getCurrentApiConfig();
+
+    if (isMobileEnv) {
+      // ========== 移动端：完全独立模式 ==========
+      // 所有API都使用本地 Standalone
+      const allMobileApis = [
+        '/cloudsearch',
+        '/search',
+        '/playlist/detail',
+        '/song/detail',
+        '/song/url/v1',
+        '/lyric/new',
+        '/lyric',
+        '/search/suggest',
+        '/banner',
+        '/personalized',
+        '/recommend/songs',
+        '/search/hot/detail',
+        '/personalized/newsong',
+        '/album',
+        '/artist',
+        '/user',
+        '/login',
+        '/logout',
+        '/collection',
+        '/favorite'
+      ];
+
+      if (allMobileApis.some((u) => config.url?.includes(u))) {
+        // 检查缓存
+        const cacheKey = mobileCache.getCacheKey(config.url || '', config.params);
+        const cached = mobileCache.get(cacheKey);
+
+        if (cached && config.method?.toUpperCase() === 'GET') {
+          // 直接返回缓存数据
+          config.adapter = async () => ({
+            data: cached,
+            status: 200,
+            statusText: 'OK (from cache)',
+            headers: {},
+            config
+          });
+          return config;
+        }
+
+        // 使用 Standalone API
+        config.adapter = async (c) => {
+          try {
+            const res = await handleStandaloneRequest(c);
+            // 缓存结果
+            if (c.method?.toUpperCase() === 'GET') {
+              mobileCache.set(cacheKey, res.data);
+            }
+            return res as any;
+          } catch (err) {
+            console.error('[Mobile] Standalone API 请求失败:', err);
+            throw err;
+          }
+        };
+      }
+
+      // 扩展超时时间
+      config.timeout = apiConfig.timeout;
+    } else {
+      // ========== 桌面端：兼容模式 ==========
+      // 保持原有逻辑，支持远程服务降级
+      const standaloneUrls = [
+        '/cloudsearch',
+        '/search',
+        '/playlist/detail',
+        '/song/detail',
+        '/song/url/v1',
+        '/lyric/new',
+        '/lyric',
+        '/search/suggest'
+      ];
+
+      if (standaloneUrls.some((u) => config.url?.includes(u))) {
+        const isRemoteAvailable = setData?.customApiUrl || import.meta.env.VITE_API;
+        if (!isRemoteAvailable) {
+          config.adapter = async (c) => {
+            try {
+              const res = await handleStandaloneRequest(c);
+              return res as any;
+            } catch (err) {
+              console.error('[Desktop Fallback] 本地 API 请求失败:', err);
+              throw err;
+            }
+          };
+        }
+      }
     }
 
-    config.baseURL = window.electron
-      ? `http://127.0.0.1:${setData?.musicApiPort}`
-      : (setData?.customApiUrl || import.meta.env.VITE_API);
     // 只在retryCount未定义时初始化为0
     if (config.retryCount === undefined) {
       config.retryCount = 0;
@@ -113,7 +209,7 @@ request.interceptors.request.use(
     config.params = {
       ...config.params,
       timestamp: Date.now(),
-      device: isElectron ? 'pc' : isMobile ? 'mobile' : 'web'
+      device: isElectron ? 'pc' : isMobileEnv ? 'mobile' : 'web'
     };
     const token = localStorage.getItem('token');
     if (token && config.method !== 'post') {

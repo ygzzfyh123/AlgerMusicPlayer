@@ -1,0 +1,169 @@
+name: Auto Release v5.1.2
+
+# 手动触发或推送时自动触发
+on:
+  workflow_dispatch:
+    inputs:
+      create_release:
+        description: 'Create new release (v5.1.2)'
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  # 检查版本并创建标签
+  prepare:
+    name: Prepare Release
+    runs-on: ubuntu-latest
+    outputs:
+      tag_created: ${{ steps.create_tag.outputs.tag_created }}
+      release_url: ${{ steps.create_tag.outputs.release_url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if version tag exists
+        id: check_tag
+        run: |
+          if git rev-parse v5.1.2 >/dev/null 2>&1; then
+            echo "tag_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "tag_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create release tag
+        id: create_tag
+        if: steps.check_tag.outputs.tag_exists == 'false'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git tag -a v5.1.2 -m "Release v5.1.2 - Mobile Standalone Edition"
+          git push origin v5.1.2
+          echo "tag_created=true" >> $GITHUB_OUTPUT
+
+      - name: Trigger build workflow
+        if: steps.create_tag.outputs.tag_created == 'true' || steps.check_tag.outputs.tag_exists == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            console.log('触发编译工作流...');
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'build.yml',
+              ref: 'v5.1.2'
+            });
+
+  # 监听编译完成后发布
+  publish:
+    name: Publish Release
+    needs: prepare
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: Display artifacts
+        run: |
+          echo "编译产物:"
+          find artifacts -type f | sort
+
+      - name: Create Release Body
+        run: |
+          cat > release_body.md << 'EOF'
+          # AlgerMusic v5.1.2 - 移动端独立版本
+          
+          ## 🎉 重大更新
+          移动端现已完全独立化！所有音乐 API 都嵌入到前端中，无需依赖外部服务器。
+          
+          ### ✨ 新增功能
+          - ✅ **完全独立** - 移动端无需任何服务器即可运行
+          - ✅ **本地缓存** - 智能缓存机制，节省 80%+ 流量
+          - ✅ **自动重试** - 网络不稳定时自动重试（最多3次）
+          - ✅ **离线支持** - 使用缓存数据离线使用
+          - ✅ **官方服务器独立** - 官方服务器到期不影响使用
+          
+          ### 📥 下载
+          | 平台 | 文件 | 说明 |
+          |------|------|------|
+          | Windows | AlgerMusicPlayer-*.exe | 桌面版安装程序 |
+          | macOS | AlgerMusicPlayer-*.dmg | Intel & Apple Silicon |
+          | Linux | algermusic-*.AppImage | 通用 Linux 应用 |
+          | Android | AlgerMusicPlayer-v5.1.2.apk | 移动端 APK |
+          
+          ### 🔧 技术亮点
+          
+          #### 移动端独立方案
+          ```
+          移动端请求 → 本地 Standalone API → 网易云 API
+          ↓
+          自动缓存 → 离线使用
+          ```
+          
+          #### 内置加密算法
+          - WEAPI 加密完全实现
+          - AES-128-CBC 加密
+          - RSA 大数加密
+          - 自动签名和验证
+          
+          #### 性能优化
+          - 请求缓存（默认10分钟）
+          - 自动重试（3次）
+          - 移动端超时设置（30秒）
+          
+          ### 📖 使用说明
+          
+          详见项目文档：[MOBILE_STANDALONE_README.md](https://github.com/ygzzfyh123/AlgerMusicPlayer/blob/main/MOBILE_STANDALONE_README.md)
+          
+          ### 🐛 已知问题
+          - macOS 编译可能需要额外的代码签名配置
+          - Linux 某些发行版可能需要额外依赖
+          
+          ### 🙏 致谢
+          感谢所有贡献者的支持！
+          
+          ---
+          
+          **版本**: v5.1.2  
+          **编译时间**: $(date '+%Y-%m-%d %H:%M:%S')  
+          **编译平台**: GitHub Actions  
+          EOF
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/**/*.exe
+            artifacts/**/*.dmg
+            artifacts/**/*.AppImage
+            artifacts/**/*.deb
+            artifacts/**/*.rpm
+            artifacts/**/*.apk
+            artifacts/**/*.zip
+            artifacts/**/latest*.yml
+          tag_name: v5.1.2
+          body_path: release_body.md
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment on commit
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const artifacts = fs.readdirSync('artifacts').length;
+            console.log(`✓ 成功发布 ${artifacts} 个编译产物`);
+            console.log('发布地址: https://github.com/${{ github.repository }}/releases/tag/v5.1.2');

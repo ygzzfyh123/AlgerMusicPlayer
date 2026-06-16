@@ -1,0 +1,506 @@
+Run npm run build
+
+> AlgerMusicPlayer@5.1.1 build
+> electron-vite build
+
+vite v6.4.3 building SSR bundle for production...
+transforming...
+✓ 196 modules transformed.
+rendering chunks...
+out/main/index.js  659.48 kB
+✓ built in 1.13s
+vite v6.4.3 building SSR bundle for production...
+transforming...
+✓ 1 modules transformed.
+rendering chunks...
+out/preload/index.js  6.84 kB
+✓ built in 20ms
+vite v6.4.3 building for production...
+transforming...
+✓ 3440 modules transformed.
+Circular chunk: index -> music -> index. Please consider disabling the "output.onlyExplicitManualChunks" option, as enabling it causes modules located between the modules included in the manual chunk "music" to be extracted into the separate chunk "index".
+Circular chunk: index -> playlist -> index. Please consider disabling the "output.onlyExplicitManualChunks" option, as enabling it causes modules located between the modules included in the manual chunk "playlist" to be extracted into the separate chunk "index".
+rendering chunks...
+[plugin vite:reporter] 
+(!) /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/playerCore.ts is dynamically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/services/playbackController.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/sleepTimer.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/home/components/HomeHero.vue?vue&type=script&setup=true&lang.ts but also statically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/App.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/settings/AudioDeviceSettings.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/index.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/player.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/playlist.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/user.ts is dynamically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/favorite.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/favorite.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/favorite.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/intelligenceMode.ts but also statically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/App.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/layout/components/SearchBar.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/router/index.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/index.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/utils/request.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/history/index.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/login/index.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/set/tabs/BasicTab.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/set/tabs/SystemTab.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/user/followers.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/user/follows.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/user/index.vue?vue&type=script&setup=true&lang.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/api/parseFromCustomApi.ts is dynamically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/hooks/usePlayerHooks.ts but also statically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/api/musicParser.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/player.ts is dynamically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/modules/download.ts but also statically imported by /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/App.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/common/PlayBottom.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/common/SearchItem.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/lyric/MusicFull.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/lyric/MusicFullMobile.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/AdvancedControlsPopover.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/MobilePlayBar.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/MobilePlayerSettings.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/PlayBar.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/PlayingListDrawer.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/SimplePlayBar.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/SleepTimer.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/components/player/SleepTimerTop.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/hooks/useDownload.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/hooks/useFavorite.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/hooks/usePlayMode.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/hooks/usePlaybackControl.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/hooks/useVolumeControl.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/layout/AppLayout.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/layout/MobileLayout.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/store/index.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/download/DownloadPage.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/heatmap/index.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/history/index.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/local-music/index.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/mobile-search-result/index.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/mv/index.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/search/SearchResult.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/user/detail.vue?vue&type=script&setup=true&lang.ts, /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/src/renderer/views/user/index.vue?vue&type=script&setup=true&lang.ts, dynamic import will not move module into another chunk.
+
+../../out/renderer/index.html                                                                   2.48 kB
+../../out/renderer/assets/iconfont-DzQUHqRQ.woff2                                               8.75 kB
+../../out/renderer/assets/iconfont-53c_NoX9.woff                                               10.15 kB
+../../out/renderer/assets/iconfont-Cio8idH0.ttf                                                16.32 kB
+../../out/renderer/assets/icon-mGmYaNg4.png                                                    20.01 kB
+../../out/renderer/assets/gzh-BvYH78ip.png                                                     36.41 kB
+../../out/renderer/assets/alipay-D4mLxafN.png                                                  44.00 kB
+../../out/renderer/assets/wechat-DnnBeqpa.png                                                  44.17 kB
+../../out/renderer/assets/remixicon-CZw4FkzQ.woff2                                            189.22 kB
+../../out/renderer/assets/remixicon-S6an_USy.woff                                             260.48 kB
+../../out/renderer/assets/lxScriptSandbox.worker-DV9mPKG-.js                                  358.88 kB
+../../out/renderer/assets/remixicon-sqouR8Ox.ttf                                              613.14 kB
+../../out/renderer/assets/remixicon-B25hvfAs.eot                                              613.31 kB
+../../out/renderer/assets/remixicon-BTtOSOPh.svg                                            3,019.61 kB
+../../out/renderer/assets/StickyTabPage-CrDbyg9b.css                                            0.06 kB
+../../out/renderer/assets/index-BpKX0YrM.css                                                    0.06 kB
+../../out/renderer/assets/PlaylistDrawer-D23UA1yz.css                                           0.12 kB
+../../out/renderer/assets/SearchItem-BtFD1J7d.css                                               0.14 kB
+../../out/renderer/assets/index-CuyRHA-0.css                                                    0.26 kB
+../../out/renderer/assets/index-B4pdnPt1.css                                                    0.26 kB
+../../out/renderer/assets/index-DW0Y-a9a.css                                                    0.26 kB
+../../out/renderer/assets/follows-Crx2vrG0.css                                                  0.33 kB
+../../out/renderer/assets/followers-Cscie_VT.css                                                0.33 kB
+../../out/renderer/assets/ImportPlaylist-Dlk8Pgqk.css                                           0.42 kB
+../../out/renderer/assets/index-CvffzEEd.css                                                    0.47 kB
+../../out/renderer/assets/SearchResult-mcM0UZdK.css                                             0.48 kB
+../../out/renderer/assets/DownloadPage-BBczsHvV.css                                             0.50 kB
+../../out/renderer/assets/index-4tZzXo35.css                                                    0.51 kB
+../../out/renderer/assets/detail-d4t89Qbo.css                                                   0.52 kB
+../../out/renderer/assets/index-GFnlnVMB.css                                                    0.61 kB
+../../out/renderer/assets/index-Dq5Wg_lr.css                                                    0.63 kB
+../../out/renderer/assets/MvPlayer-BCUZrono.css                                                 0.69 kB
+../../out/renderer/assets/index-BmKTg4Bd.css                                                    0.77 kB
+../../out/renderer/assets/radio-D3XNnpYV.css                                                    0.84 kB
+../../out/renderer/assets/MusicListPage-P_DVUcwN.css                                            2.04 kB
+../../out/renderer/assets/detail-DGqRpfpV.css                                                   3.96 kB
+../../out/renderer/assets/index-CL5-sID_.css                                                    5.75 kB
+../../out/renderer/assets/index-ByHSjUod.css                                                    5.94 kB
+../../out/renderer/assets/HistoryRecommend-B-Hz57lf.css                                         6.23 kB
+../../out/renderer/assets/PlayingListDrawer-CL_bsiAb.css                                        6.35 kB
+../../out/renderer/assets/index-G71vgVLB.css                                                    8.28 kB
+../../out/renderer/assets/index-B9L4s004.css                                                    8.76 kB
+../../out/renderer/assets/MobilePlayBar-Cfw-dCnM.css                                           10.71 kB
+../../out/renderer/assets/index-DCavg1h4.css                                                   11.84 kB
+../../out/renderer/assets/index-gO_GAknj.css                                                   12.84 kB
+../../out/renderer/assets/index-BY-9A1BE.css                                                   19.52 kB
+../../out/renderer/assets/index-CcwU8L-Q.css                                                   25.79 kB
+../../out/renderer/assets/PlayBar-IdYzLz9-.css                                                 38.45 kB
+../../out/renderer/assets/MusicFullWrapper-w8SABAqk.css                                        61.63 kB
+../../out/renderer/assets/index-C_dpZQAw.css                                                  462.21 kB
+../../out/renderer/assets/list-DC190VAr.js                                                      0.46 kB
+../../out/renderer/assets/Add-LIXD5V9m.js                                                       0.51 kB
+../../out/renderer/assets/MusicListNavigator-HE6xIeNT.js                                        0.74 kB
+../../out/renderer/assets/lyricTranslation-DIKMH5-X.js                                          0.91 kB
+../../out/renderer/assets/useScrollTitle-x6KzNfHz.js                                            0.91 kB
+../../out/renderer/assets/podcast-tKUU7CnH.js                                                   1.03 kB
+../../out/renderer/assets/music-Bj4fRXPD.js                                                     1.33 kB
+../../out/renderer/assets/podcastUtils-CNldpqcK.js                                              1.43 kB
+../../out/renderer/assets/useProgressiveRender-Cbl41Njj.js                                      1.98 kB
+../../out/renderer/assets/opencc-WSCgvJyI.js                                                    2.40 kB
+../../out/renderer/assets/VirtualList--Zp3prtW.js                                               3.86 kB
+../../out/renderer/assets/music-BFBH9STh.js                                                     4.41 kB
+../../out/renderer/assets/SearchItem-D2nZk5h_.js                                                5.56 kB
+../../out/renderer/assets/MobilePlayBar-BqAYZNs8.js                                             5.78 kB
+../../out/renderer/assets/StickyTabPage-mMYNQmGH.js                                             6.96 kB
+../../out/renderer/assets/musicSourceConfig-BoAzAuzV.js                                         7.26 kB
+../../out/renderer/assets/index-Cbj_Iyyf.js                                                     7.48 kB
+../../out/renderer/assets/PlayingListDrawer-W1qWg4wx.js                                         7.56 kB
+../../out/renderer/assets/index-BMd4ek_6.js                                                     8.48 kB
+../../out/renderer/assets/index-WBevoqqq.js                                                     9.27 kB
+../../out/renderer/assets/text-CgCfHzu9.js                                                     10.08 kB
+../../out/renderer/assets/index-Gq3RKO1s.js                                                    10.28 kB
+../../out/renderer/assets/index-59uEBLBg.js                                                    10.42 kB
+../../out/renderer/assets/index-98oct_xO.js                                                    10.65 kB
+../../out/renderer/assets/index-Ig0Zq1vF.js                                                    11.05 kB
+../../out/renderer/assets/follows-bIYto1Sp.js                                                  11.63 kB
+../../out/renderer/assets/followers-DKdSe4gQ.js                                                11.73 kB
+../../out/renderer/assets/HistoryRecommend-CDebBbm4.js                                         12.22 kB
+../../out/renderer/assets/PlaylistDrawer-BR3zonHI.js                                           14.52 kB
+../../out/renderer/assets/playbackController-D3PhDk45.js                                       14.86 kB
+../../out/renderer/assets/index-DtxskzZv.js                                                    14.89 kB
+../../out/renderer/assets/index-CRkIT443.js                                                    16.14 kB
+../../out/renderer/assets/index-DQ8jU7Sg.js                                                    16.42 kB
+../../out/renderer/assets/VirtualList-CAdgZr1k.js                                              19.37 kB
+../../out/renderer/assets/index-CWirpNKb.js                                                    21.88 kB
+../../out/renderer/assets/index-D1zjayEd.js                                                    21.90 kB
+../../out/renderer/assets/detail-COYg78V2.js                                                   22.32 kB
+../../out/renderer/assets/radio-J43Vwt68.js                                                    22.45 kB
+../../out/renderer/assets/InputNumber-6ajI72QI.js                                              22.93 kB
+../../out/renderer/assets/SearchResult-CNG-AQik.js                                             23.06 kB
+../../out/renderer/assets/index-BHbz4ryX.js                                                    23.28 kB
+../../out/renderer/assets/playlist-BIEZH5o6.js                                                 23.93 kB
+../../out/renderer/assets/MvPlayer-BAjopiVn.js                                                 25.15 kB
+../../out/renderer/assets/main-Bco1MTsi.js                                                     30.37 kB
+../../out/renderer/assets/ImportPlaylist-BHk8PfB6.js                                           30.73 kB
+../../out/renderer/assets/index-B3ucylI1.js                                                    35.09 kB
+../../out/renderer/assets/MusicListPage-BUsA7-Z-.js                                            40.46 kB
+../../out/renderer/assets/detail-0a0eZDYx.js                                                   40.71 kB
+../../out/renderer/assets/Tabs-d5Wh9_3k.js                                                     52.20 kB
+../../out/renderer/assets/DownloadPage-B9xvNWZU.js                                             53.42 kB
+../../out/renderer/assets/PlayBar-sfbdeVpa.js                                                  56.09 kB
+../../out/renderer/assets/Input-sVDYe7_n.js                                                    58.77 kB
+../../out/renderer/assets/index-xewsvggO.js                                                    63.66 kB
+../../out/renderer/assets/index-D_gXy_ZU.js                                                    82.32 kB
+../../out/renderer/assets/index-B5z-Bsnn.js                                                    99.98 kB
+../../out/renderer/assets/MusicHook-B2GiFeXy.js                                               105.25 kB
+../../out/renderer/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js    145.12 kB
+../../out/renderer/assets/index-BzC-6xCT.js                                                   421.37 kB
+../../out/renderer/assets/index-C7yeg0dV.js                                                   473.40 kB
+../../out/renderer/assets/index-DXAHS3_F.js                                                 2,089.74 kB
+✓ built in 11.80s
+
+✨ [vite-plugin-compression]:algorithm=gzip - compressed file successfully: 
+renderer/assets/HistoryRecommend-B-Hz57lf.css.gz                                      6.08kb / gzip: 1.12kb
+renderer/assets/HistoryRecommend-CDebBbm4.js.gz                                       11.93kb / gzip: 2.93kb
+renderer/assets/ImportPlaylist-BHk8PfB6.js.gz                                         30.00kb / gzip: 5.45kb
+renderer/assets/DownloadPage-B9xvNWZU.js.gz                                           52.17kb / gzip: 8.83kb
+renderer/assets/InputNumber-6ajI72QI.js.gz                                            22.39kb / gzip: 4.60kb
+renderer/assets/MobilePlayBar-BqAYZNs8.js.gz                                          5.64kb / gzip: 1.86kb
+renderer/assets/MobilePlayBar-Cfw-dCnM.css.gz                                         10.46kb / gzip: 1.83kb
+renderer/assets/Input-sVDYe7_n.js.gz                                                  57.39kb / gzip: 12.05kb
+renderer/assets/MusicFullWrapper-w8SABAqk.css.gz                                      60.18kb / gzip: 8.20kb
+renderer/assets/MusicListPage-P_DVUcwN.css.gz                                         1.99kb / gzip: 0.66kb
+renderer/assets/MvPlayer-BAjopiVn.js.gz                                               24.56kb / gzip: 4.72kb
+renderer/assets/PlayBar-IdYzLz9-.css.gz                                               37.54kb / gzip: 4.20kb
+renderer/assets/PlayingListDrawer-W1qWg4wx.js.gz                                      7.38kb / gzip: 2.24kb
+renderer/assets/MusicListPage-BUsA7-Z-.js.gz                                          39.51kb / gzip: 8.27kb
+renderer/assets/PlayingListDrawer-CL_bsiAb.css.gz                                     6.20kb / gzip: 1.31kb
+renderer/assets/SearchItem-D2nZk5h_.js.gz                                             5.43kb / gzip: 1.77kb
+renderer/assets/PlaylistDrawer-BR3zonHI.js.gz                                         14.18kb / gzip: 3.39kb
+renderer/assets/PlayBar-sfbdeVpa.js.gz                                                54.78kb / gzip: 10.31kb
+renderer/assets/StickyTabPage-mMYNQmGH.js.gz                                          6.80kb / gzip: 2.03kb
+renderer/assets/VirtualList--Zp3prtW.js.gz                                            3.77kb / gzip: 1.03kb
+renderer/assets/SearchResult-CNG-AQik.js.gz                                           22.52kb / gzip: 4.94kb
+renderer/assets/detail-COYg78V2.js.gz                                                 21.80kb / gzip: 4.50kb
+renderer/assets/detail-DGqRpfpV.css.gz                                                3.87kb / gzip: 1.16kb
+renderer/assets/VirtualList-CAdgZr1k.js.gz                                            18.92kb / gzip: 4.77kb
+renderer/assets/Tabs-d5Wh9_3k.js.gz                                                   50.98kb / gzip: 10.79kb
+renderer/assets/index-98oct_xO.js.gz                                                  10.40kb / gzip: 3.24kb
+renderer/assets/detail-0a0eZDYx.js.gz                                                 39.75kb / gzip: 7.76kb
+renderer/assets/index-B9L4s004.css.gz                                                 8.56kb / gzip: 1.27kb
+renderer/assets/index-BMd4ek_6.js.gz                                                  8.29kb / gzip: 2.25kb
+renderer/assets/index-BY-9A1BE.css.gz                                                 19.06kb / gzip: 3.24kb
+renderer/assets/index-ByHSjUod.css.gz                                                 5.80kb / gzip: 0.94kb
+renderer/assets/index-B3ucylI1.js.gz                                                  34.27kb / gzip: 6.07kb
+renderer/assets/follows-bIYto1Sp.js.gz                                                11.35kb / gzip: 3.08kb
+renderer/assets/index-CL5-sID_.css.gz                                                 5.62kb / gzip: 1.53kb
+renderer/assets/index-BHbz4ryX.js.gz                                                  22.73kb / gzip: 4.36kb
+renderer/assets/index-CRkIT443.js.gz                                                  15.76kb / gzip: 3.54kb
+renderer/assets/index-CWirpNKb.js.gz                                                  21.37kb / gzip: 4.90kb
+renderer/assets/followers-DKdSe4gQ.js.gz                                              11.46kb / gzip: 3.08kb
+renderer/assets/index-59uEBLBg.js.gz                                                  10.18kb / gzip: 2.51kb
+renderer/assets/index-CcwU8L-Q.css.gz                                                 25.19kb / gzip: 2.53kb
+renderer/assets/index-D1zjayEd.js.gz                                                  21.38kb / gzip: 4.65kb
+renderer/assets/index-DCavg1h4.css.gz                                                 11.57kb / gzip: 2.48kb
+renderer/assets/index-DQ8jU7Sg.js.gz                                                  16.04kb / gzip: 3.95kb
+renderer/assets/index-DtxskzZv.js.gz                                                  14.54kb / gzip: 3.68kb
+renderer/assets/index-G71vgVLB.css.gz                                                 8.09kb / gzip: 1.21kb
+renderer/assets/index-Gq3RKO1s.js.gz                                                  10.04kb / gzip: 2.53kb
+renderer/assets/index-Ig0Zq1vF.js.gz                                                  10.79kb / gzip: 3.12kb
+renderer/assets/index-WBevoqqq.js.gz                                                  9.06kb / gzip: 2.97kb
+renderer/assets/index-gO_GAknj.css.gz                                                 12.54kb / gzip: 2.37kb
+renderer/assets/music-BFBH9STh.js.gz                                                  4.31kb / gzip: 1.36kb
+renderer/assets/index-Cbj_Iyyf.js.gz                                                  7.31kb / gzip: 2.20kb
+renderer/assets/musicSourceConfig-BoAzAuzV.js.gz                                      7.09kb / gzip: 2.29kb
+renderer/assets/opencc-WSCgvJyI.js.gz                                                 2.34kb / gzip: 0.85kb
+renderer/assets/playbackController-D3PhDk45.js.gz                                     14.51kb / gzip: 3.79kb
+renderer/assets/podcast-tKUU7CnH.js.gz                                                1.01kb / gzip: 0.36kb
+renderer/assets/podcastUtils-CNldpqcK.js.gz                                           1.40kb / gzip: 0.47kb
+renderer/assets/playlist-BIEZH5o6.js.gz                                               23.37kb / gzip: 5.08kb
+renderer/assets/radio-J43Vwt68.js.gz                                                  21.93kb / gzip: 5.09kb
+renderer/index.html.gz                                                                2.42kb / gzip: 1.05kb
+renderer/assets/useProgressiveRender-Cbl41Njj.js.gz                                   1.94kb / gzip: 0.72kb
+renderer/assets/music-Bj4fRXPD.js.gz                                                  1.30kb / gzip: 0.53kb
+renderer/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js.gz   141.72kb / gzip: 25.03kb
+renderer/assets/MusicHook-B2GiFeXy.js.gz                                              102.78kb / gzip: 24.54kb
+renderer/assets/index-B5z-Bsnn.js.gz                                                  97.63kb / gzip: 18.34kb
+renderer/assets/index-xewsvggO.js.gz                                                  62.17kb / gzip: 11.59kb
+renderer/assets/main-Bco1MTsi.js.gz                                                   29.66kb / gzip: 19.94kb
+renderer/assets/index-D_gXy_ZU.js.gz                                                  80.39kb / gzip: 16.56kb
+renderer/assets/text-CgCfHzu9.js.gz                                                   9.84kb / gzip: 2.77kb
+renderer/html/remote-control.html.gz                                                  14.90kb / gzip: 4.03kb
+renderer/assets/lxScriptSandbox.worker-DV9mPKG-.js.gz                                 350.47kb / gzip: 63.22kb
+renderer/assets/index-BzC-6xCT.js.gz                                                  411.50kb / gzip: 73.47kb
+renderer/assets/index-C_dpZQAw.css.gz                                                 451.38kb / gzip: 54.50kb
+renderer/assets/index-C7yeg0dV.js.gz                                                  462.31kb / gzip: 97.33kb
+renderer/assets/index-DXAHS3_F.js.gz                                                  2040.76kb / gzip: 435.24kb
+
+
+✔ Copying web assets from renderer to android/app/src/main/assets/public in 19.37ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 609.14μs
+✔ copy android in 54.56ms
+✔ Updating Android plugins in 8.60ms
+✔ update android in 41.70ms
+[info] Sync finished in 0.144s
+Downloading https://services.gradle.org/distributions/gradle-8.14.3-all.zip
+.....................10%.....................20%......................30%.....................40%......................50%.....................60%.....................70%......................80%.....................90%......................100%
+
+Welcome to Gradle 8.14.3!
+
+Here are the highlights of this release:
+ - Java 24 support
+ - GraalVM Native Image toolchain selection
+ - Enhancements to test reporting
+ - Build Authoring improvements
+
+For more details see https://docs.gradle.org/8.14.3/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Configure project :app
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Configure project :capacitor-cordova-android-plugins
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders
+> Task :capacitor-android:preBuild UP-TO-DATE
+> Task :capacitor-android:preReleaseBuild UP-TO-DATE
+> Task :capacitor-android:mergeReleaseJniLibFolders
+> Task :capacitor-android:mergeReleaseNativeLibs NO-SOURCE
+> Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preReleaseBuild UP-TO-DATE
+> Task :capacitor-android:copyReleaseJniLibsProjectOnly
+> Task :capacitor-cordova-android-plugins:mergeReleaseJniLibFolders
+> Task :capacitor-cordova-android-plugins:mergeReleaseNativeLibs NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyReleaseJniLibsProjectOnly
+> Task :capacitor-android:generateReleaseResValues
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :capacitor-android:generateReleaseResources
+> Task :capacitor-android:packageReleaseResources
+> Task :capacitor-android:processReleaseNavigationResources
+> Task :capacitor-cordova-android-plugins:generateReleaseResValues
+> Task :capacitor-android:javaPreCompileRelease
+> Task :capacitor-cordova-android-plugins:generateReleaseResources
+> Task :capacitor-cordova-android-plugins:packageReleaseResources
+> Task :capacitor-cordova-android-plugins:processReleaseNavigationResources
+> Task :capacitor-cordova-android-plugins:javaPreCompileRelease
+> Task :capacitor-android:parseReleaseLocalResources
+> Task :capacitor-cordova-android-plugins:parseReleaseLocalResources
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:javaPreCompileRelease
+> Task :capacitor-android:writeReleaseAarMetadata
+> Task :capacitor-cordova-android-plugins:writeReleaseAarMetadata
+> Task :capacitor-android:generateReleaseRFile
+> Task :capacitor-cordova-android-plugins:generateReleaseRFile
+> Task :app:processReleaseNavigationResources
+
+Note: Some input files use unchecked or unsafe operations.
+> Task :capacitor-android:compileReleaseJavaWithJavac
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :capacitor-cordova-android-plugins:compileReleaseJavaWithJavac NO-SOURCE
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToDirRelease
+> Task :capacitor-android:bundleLibRuntimeToDirRelease
+> Task :app:checkReleaseAarMetadata
+> Task :app:generateReleaseResValues
+> Task :app:compileReleaseNavigationResources
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :capacitor-android:extractDeepLinksRelease
+> Task :app:parseReleaseLocalResources
+> Task :capacitor-cordova-android-plugins:extractDeepLinksRelease
+> Task :capacitor-android:processReleaseManifest
+> Task :capacitor-cordova-android-plugins:processReleaseManifest
+> Task :capacitor-android:compileReleaseLibraryResources
+> Task :app:mergeReleaseResources
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :capacitor-cordova-android-plugins:compileReleaseLibraryResources
+> Task :app:processReleaseManifestForPackage
+> Task :capacitor-cordova-android-plugins:bundleLibCompileToJarRelease
+> Task :capacitor-android:bundleLibCompileToJarRelease
+> Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseStartupProfile
+> Task :app:processReleaseResources
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:dexBuilderRelease
+> Task :capacitor-android:prepareReleaseArtProfile
+> Task :capacitor-cordova-android-plugins:prepareReleaseArtProfile
+> Task :app:mergeReleaseArtProfile
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToJarRelease
+> Task :capacitor-android:bundleLibRuntimeToJarRelease
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :capacitor-android:mergeReleaseShaders
+> Task :capacitor-android:compileReleaseShaders NO-SOURCE
+> Task :capacitor-android:generateReleaseAssets UP-TO-DATE
+> Task :capacitor-android:mergeReleaseAssets
+> Task :capacitor-cordova-android-plugins:mergeReleaseShaders
+> Task :capacitor-cordova-android-plugins:compileReleaseShaders NO-SOURCE
+> Task :capacitor-cordova-android-plugins:generateReleaseAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:mergeReleaseAssets
+
+> Task :app:mergeReleaseAssets FAILED
+ERROR: [public/assets/index-CL5-sID_.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CL5-sID_.css.gz [public/assets/index-CL5-sID_.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CL5-sID_.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-Gq3RKO1s.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Gq3RKO1s.js.gz [public/assets/index-Gq3RKO1s.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Gq3RKO1s.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/text-CgCfHzu9.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/text-CgCfHzu9.js [public/assets/text-CgCfHzu9.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/text-CgCfHzu9.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/musicSourceConfig-BoAzAuzV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/musicSourceConfig-BoAzAuzV.js.gz [public/assets/musicSourceConfig-BoAzAuzV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/musicSourceConfig-BoAzAuzV.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MobilePlayBar-BqAYZNs8.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-BqAYZNs8.js [public/assets/MobilePlayBar-BqAYZNs8.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-BqAYZNs8.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/podcast-tKUU7CnH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcast-tKUU7CnH.js [public/assets/podcast-tKUU7CnH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcast-tKUU7CnH.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MvPlayer-BAjopiVn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MvPlayer-BAjopiVn.js [public/assets/MvPlayer-BAjopiVn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MvPlayer-BAjopiVn.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-CcwU8L-Q.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CcwU8L-Q.css [public/assets/index-CcwU8L-Q.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CcwU8L-Q.css.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-C_dpZQAw.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C_dpZQAw.css.gz [public/assets/index-C_dpZQAw.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C_dpZQAw.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-B5z-Bsnn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B5z-Bsnn.js.gz [public/assets/index-B5z-Bsnn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B5z-Bsnn.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/followers-DKdSe4gQ.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/followers-DKdSe4gQ.js.gz [public/assets/followers-DKdSe4gQ.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/followers-DKdSe4gQ.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/PlayingListDrawer-CL_bsiAb.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-CL_bsiAb.css.gz [public/assets/PlayingListDrawer-CL_bsiAb.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-CL_bsiAb.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/detail-DGqRpfpV.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-DGqRpfpV.css [public/assets/detail-DGqRpfpV.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-DGqRpfpV.css.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/StickyTabPage-mMYNQmGH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/StickyTabPage-mMYNQmGH.js [public/assets/StickyTabPage-mMYNQmGH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/StickyTabPage-mMYNQmGH.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MobilePlayBar-Cfw-dCnM.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-Cfw-dCnM.css.gz [public/assets/MobilePlayBar-Cfw-dCnM.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-Cfw-dCnM.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-D_gXy_ZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D_gXy_ZU.js.gz [public/assets/index-D_gXy_ZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D_gXy_ZU.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MusicListPage-BUsA7-Z-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-BUsA7-Z-.js [public/assets/MusicListPage-BUsA7-Z-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-BUsA7-Z-.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/detail-0a0eZDYx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-0a0eZDYx.js [public/assets/detail-0a0eZDYx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-0a0eZDYx.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-G71vgVLB.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-G71vgVLB.css [public/assets/index-G71vgVLB.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-G71vgVLB.css.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/SearchItem-D2nZk5h_.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchItem-D2nZk5h_.js.gz [public/assets/SearchItem-D2nZk5h_.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchItem-D2nZk5h_.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-BY-9A1BE.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BY-9A1BE.css [public/assets/index-BY-9A1BE.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BY-9A1BE.css.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-ByHSjUod.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-ByHSjUod.css.gz [public/assets/index-ByHSjUod.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-ByHSjUod.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/playlist-BIEZH5o6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playlist-BIEZH5o6.js.gz [public/assets/playlist-BIEZH5o6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playlist-BIEZH5o6.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/PlayBar-sfbdeVpa.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-sfbdeVpa.js.gz [public/assets/PlayBar-sfbdeVpa.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-sfbdeVpa.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/lxScriptSandbox.worker-DV9mPKG-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/lxScriptSandbox.worker-DV9mPKG-.js [public/assets/lxScriptSandbox.worker-DV9mPKG-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/lxScriptSandbox.worker-DV9mPKG-.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/opencc-WSCgvJyI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/opencc-WSCgvJyI.js [public/assets/opencc-WSCgvJyI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/opencc-WSCgvJyI.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-DtxskzZv.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DtxskzZv.js [public/assets/index-DtxskzZv.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DtxskzZv.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-DXAHS3_F.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DXAHS3_F.js [public/assets/index-DXAHS3_F.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DXAHS3_F.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-C7yeg0dV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C7yeg0dV.js [public/assets/index-C7yeg0dV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C7yeg0dV.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/HistoryRecommend-CDebBbm4.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-CDebBbm4.js [public/assets/HistoryRecommend-CDebBbm4.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-CDebBbm4.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-CWirpNKb.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CWirpNKb.js.gz [public/assets/index-CWirpNKb.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CWirpNKb.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-D1zjayEd.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D1zjayEd.js.gz [public/assets/index-D1zjayEd.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D1zjayEd.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-98oct_xO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-98oct_xO.js [public/assets/index-98oct_xO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-98oct_xO.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/podcastUtils-CNldpqcK.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcastUtils-CNldpqcK.js.gz [public/assets/podcastUtils-CNldpqcK.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcastUtils-CNldpqcK.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/music-Bj4fRXPD.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-Bj4fRXPD.js.gz [public/assets/music-Bj4fRXPD.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-Bj4fRXPD.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/music-BFBH9STh.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-BFBH9STh.js [public/assets/music-BFBH9STh.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-BFBH9STh.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/VirtualList--Zp3prtW.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList--Zp3prtW.js [public/assets/VirtualList--Zp3prtW.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList--Zp3prtW.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/InputNumber-6ajI72QI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/InputNumber-6ajI72QI.js [public/assets/InputNumber-6ajI72QI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/InputNumber-6ajI72QI.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/follows-bIYto1Sp.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/follows-bIYto1Sp.js.gz [public/assets/follows-bIYto1Sp.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/follows-bIYto1Sp.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/Input-sVDYe7_n.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Input-sVDYe7_n.js.gz [public/assets/Input-sVDYe7_n.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Input-sVDYe7_n.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MusicFullWrapper-w8SABAqk.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper-w8SABAqk.css [public/assets/MusicFullWrapper-w8SABAqk.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper-w8SABAqk.css.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/Tabs-d5Wh9_3k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Tabs-d5Wh9_3k.js.gz [public/assets/Tabs-d5Wh9_3k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Tabs-d5Wh9_3k.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/PlayBar-IdYzLz9-.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-IdYzLz9-.css.gz [public/assets/PlayBar-IdYzLz9-.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-IdYzLz9-.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/DownloadPage-B9xvNWZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/DownloadPage-B9xvNWZU.js [public/assets/DownloadPage-B9xvNWZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/DownloadPage-B9xvNWZU.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MusicHook-B2GiFeXy.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicHook-B2GiFeXy.js.gz [public/assets/MusicHook-B2GiFeXy.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicHook-B2GiFeXy.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/SearchResult-CNG-AQik.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchResult-CNG-AQik.js [public/assets/SearchResult-CNG-AQik.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchResult-CNG-AQik.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/useProgressiveRender-Cbl41Njj.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/useProgressiveRender-Cbl41Njj.js [public/assets/useProgressiveRender-Cbl41Njj.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/useProgressiveRender-Cbl41Njj.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-gO_GAknj.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-gO_GAknj.css.gz [public/assets/index-gO_GAknj.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-gO_GAknj.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-Ig0Zq1vF.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Ig0Zq1vF.js.gz [public/assets/index-Ig0Zq1vF.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Ig0Zq1vF.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-CRkIT443.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CRkIT443.js.gz [public/assets/index-CRkIT443.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CRkIT443.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/detail-COYg78V2.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-COYg78V2.js.gz [public/assets/detail-COYg78V2.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-COYg78V2.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-BHbz4ryX.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BHbz4ryX.js.gz [public/assets/index-BHbz4ryX.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BHbz4ryX.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-B9L4s004.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B9L4s004.css [public/assets/index-B9L4s004.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B9L4s004.css.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-BMd4ek_6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BMd4ek_6.js.gz [public/assets/index-BMd4ek_6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BMd4ek_6.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/main-Bco1MTsi.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/main-Bco1MTsi.js.gz [public/assets/main-Bco1MTsi.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/main-Bco1MTsi.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js [public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/PlayingListDrawer-W1qWg4wx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-W1qWg4wx.js.gz [public/assets/PlayingListDrawer-W1qWg4wx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-W1qWg4wx.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/PlaylistDrawer-BR3zonHI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlaylistDrawer-BR3zonHI.js [public/assets/PlaylistDrawer-BR3zonHI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlaylistDrawer-BR3zonHI.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/VirtualList-CAdgZr1k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList-CAdgZr1k.js.gz [public/assets/VirtualList-CAdgZr1k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList-CAdgZr1k.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-xewsvggO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-xewsvggO.js.gz [public/assets/index-xewsvggO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-xewsvggO.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/HistoryRecommend-B-Hz57lf.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-B-Hz57lf.css.gz [public/assets/HistoryRecommend-B-Hz57lf.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-B-Hz57lf.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/radio-J43Vwt68.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/radio-J43Vwt68.js.gz [public/assets/radio-J43Vwt68.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/radio-J43Vwt68.js: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-Cbj_Iyyf.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Cbj_Iyyf.js [public/assets/index-Cbj_Iyyf.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Cbj_Iyyf.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-B3ucylI1.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B3ucylI1.js [public/assets/index-B3ucylI1.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B3ucylI1.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-DCavg1h4.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DCavg1h4.css.gz [public/assets/index-DCavg1h4.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DCavg1h4.css: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-WBevoqqq.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-WBevoqqq.js [public/assets/index-WBevoqqq.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-WBevoqqq.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/ImportPlaylist-BHk8PfB6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/ImportPlaylist-BHk8PfB6.js [public/assets/ImportPlaylist-BHk8PfB6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/ImportPlaylist-BHk8PfB6.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-59uEBLBg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-59uEBLBg.js [public/assets/index-59uEBLBg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-59uEBLBg.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/MusicListPage-P_DVUcwN.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-P_DVUcwN.css [public/assets/MusicListPage-P_DVUcwN.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-P_DVUcwN.css.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/playbackController-D3PhDk45.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playbackController-D3PhDk45.js [public/assets/playbackController-D3PhDk45.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playbackController-D3PhDk45.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-BzC-6xCT.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BzC-6xCT.js [public/assets/index-BzC-6xCT.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BzC-6xCT.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/assets/index-DQ8jU7Sg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DQ8jU7Sg.js [public/assets/index-DQ8jU7Sg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DQ8jU7Sg.js.gz: Resource and asset merger: Duplicate resources
+ERROR: [public/index.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/index.html.gz [public/index.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/index.html: Resource and asset merger: Duplicate resources
+ERROR: [public/html/remote-control.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/html/remote-control.html.gz [public/html/remote-control.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/html/remote-control.html: Resource and asset merger: Duplicate resources
+
+> Task :app:mergeExtDexRelease
+
+
+[Incubating] Problems report is available at: file:///home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/build/reports/problems/problems-report.html
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeReleaseAssets'.
+> [public/assets/index-CL5-sID_.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CL5-sID_.css.gz	[public/assets/index-CL5-sID_.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CL5-sID_.css: Error: Duplicate resources
+  [public/assets/index-Gq3RKO1s.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Gq3RKO1s.js.gz	[public/assets/index-Gq3RKO1s.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Gq3RKO1s.js: Error: Duplicate resources
+  [public/assets/text-CgCfHzu9.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/text-CgCfHzu9.js	[public/assets/text-CgCfHzu9.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/text-CgCfHzu9.js.gz: Error: Duplicate resources
+  [public/assets/musicSourceConfig-BoAzAuzV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/musicSourceConfig-BoAzAuzV.js.gz	[public/assets/musicSourceConfig-BoAzAuzV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/musicSourceConfig-BoAzAuzV.js: Error: Duplicate resources
+  [public/assets/MobilePlayBar-BqAYZNs8.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-BqAYZNs8.js	[public/assets/MobilePlayBar-BqAYZNs8.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-BqAYZNs8.js.gz: Error: Duplicate resources
+  [public/assets/podcast-tKUU7CnH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcast-tKUU7CnH.js	[public/assets/podcast-tKUU7CnH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcast-tKUU7CnH.js.gz: Error: Duplicate resources
+  [public/assets/MvPlayer-BAjopiVn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MvPlayer-BAjopiVn.js	[public/assets/MvPlayer-BAjopiVn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MvPlayer-BAjopiVn.js.gz: Error: Duplicate resources
+  [public/assets/index-CcwU8L-Q.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CcwU8L-Q.css	[public/assets/index-CcwU8L-Q.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CcwU8L-Q.css.gz: Error: Duplicate resources
+  [public/assets/index-C_dpZQAw.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C_dpZQAw.css.gz	[public/assets/index-C_dpZQAw.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C_dpZQAw.css: Error: Duplicate resources
+  [public/assets/index-B5z-Bsnn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B5z-Bsnn.js.gz	[public/assets/index-B5z-Bsnn.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B5z-Bsnn.js: Error: Duplicate resources
+  [public/assets/followers-DKdSe4gQ.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/followers-DKdSe4gQ.js.gz	[public/assets/followers-DKdSe4gQ.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/followers-DKdSe4gQ.js: Error: Duplicate resources
+  [public/assets/PlayingListDrawer-CL_bsiAb.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-CL_bsiAb.css.gz	[public/assets/PlayingListDrawer-CL_bsiAb.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-CL_bsiAb.css: Error: Duplicate resources
+  [public/assets/detail-DGqRpfpV.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-DGqRpfpV.css	[public/assets/detail-DGqRpfpV.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-DGqRpfpV.css.gz: Error: Duplicate resources
+  [public/assets/StickyTabPage-mMYNQmGH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/StickyTabPage-mMYNQmGH.js	[public/assets/StickyTabPage-mMYNQmGH.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/StickyTabPage-mMYNQmGH.js.gz: Error: Duplicate resources
+  [public/assets/MobilePlayBar-Cfw-dCnM.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-Cfw-dCnM.css.gz	[public/assets/MobilePlayBar-Cfw-dCnM.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MobilePlayBar-Cfw-dCnM.css: Error: Duplicate resources
+  [public/assets/index-D_gXy_ZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D_gXy_ZU.js.gz	[public/assets/index-D_gXy_ZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D_gXy_ZU.js: Error: Duplicate resources
+  [public/assets/MusicListPage-BUsA7-Z-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-BUsA7-Z-.js	[public/assets/MusicListPage-BUsA7-Z-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-BUsA7-Z-.js.gz: Error: Duplicate resources
+65 actionable tasks: 65 executed
+  [public/assets/detail-0a0eZDYx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-0a0eZDYx.js	[public/assets/detail-0a0eZDYx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-0a0eZDYx.js.gz: Error: Duplicate resources
+  [public/assets/index-G71vgVLB.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-G71vgVLB.css	[public/assets/index-G71vgVLB.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-G71vgVLB.css.gz: Error: Duplicate resources
+  [public/assets/SearchItem-D2nZk5h_.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchItem-D2nZk5h_.js.gz	[public/assets/SearchItem-D2nZk5h_.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchItem-D2nZk5h_.js: Error: Duplicate resources
+  [public/assets/index-BY-9A1BE.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BY-9A1BE.css	[public/assets/index-BY-9A1BE.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BY-9A1BE.css.gz: Error: Duplicate resources
+  [public/assets/index-ByHSjUod.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-ByHSjUod.css.gz	[public/assets/index-ByHSjUod.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-ByHSjUod.css: Error: Duplicate resources
+  [public/assets/playlist-BIEZH5o6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playlist-BIEZH5o6.js.gz	[public/assets/playlist-BIEZH5o6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playlist-BIEZH5o6.js: Error: Duplicate resources
+  [public/assets/PlayBar-sfbdeVpa.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-sfbdeVpa.js.gz	[public/assets/PlayBar-sfbdeVpa.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-sfbdeVpa.js: Error: Duplicate resources
+  [public/assets/lxScriptSandbox.worker-DV9mPKG-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/lxScriptSandbox.worker-DV9mPKG-.js	[public/assets/lxScriptSandbox.worker-DV9mPKG-.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/lxScriptSandbox.worker-DV9mPKG-.js.gz: Error: Duplicate resources
+  [public/assets/opencc-WSCgvJyI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/opencc-WSCgvJyI.js	[public/assets/opencc-WSCgvJyI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/opencc-WSCgvJyI.js.gz: Error: Duplicate resources
+  [public/assets/index-DtxskzZv.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DtxskzZv.js	[public/assets/index-DtxskzZv.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DtxskzZv.js.gz: Error: Duplicate resources
+  [public/assets/index-DXAHS3_F.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DXAHS3_F.js	[public/assets/index-DXAHS3_F.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DXAHS3_F.js.gz: Error: Duplicate resources
+  [public/assets/index-C7yeg0dV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C7yeg0dV.js	[public/assets/index-C7yeg0dV.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-C7yeg0dV.js.gz: Error: Duplicate resources
+  [public/assets/HistoryRecommend-CDebBbm4.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-CDebBbm4.js	[public/assets/HistoryRecommend-CDebBbm4.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-CDebBbm4.js.gz: Error: Duplicate resources
+  [public/assets/index-CWirpNKb.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CWirpNKb.js.gz	[public/assets/index-CWirpNKb.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CWirpNKb.js: Error: Duplicate resources
+  [public/assets/index-D1zjayEd.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D1zjayEd.js.gz	[public/assets/index-D1zjayEd.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-D1zjayEd.js: Error: Duplicate resources
+  [public/assets/index-98oct_xO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-98oct_xO.js	[public/assets/index-98oct_xO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-98oct_xO.js.gz: Error: Duplicate resources
+  [public/assets/podcastUtils-CNldpqcK.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcastUtils-CNldpqcK.js.gz	[public/assets/podcastUtils-CNldpqcK.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/podcastUtils-CNldpqcK.js: Error: Duplicate resources
+  [public/assets/music-Bj4fRXPD.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-Bj4fRXPD.js.gz	[public/assets/music-Bj4fRXPD.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-Bj4fRXPD.js: Error: Duplicate resources
+  [public/assets/music-BFBH9STh.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-BFBH9STh.js	[public/assets/music-BFBH9STh.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/music-BFBH9STh.js.gz: Error: Duplicate resources
+  [public/assets/VirtualList--Zp3prtW.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList--Zp3prtW.js	[public/assets/VirtualList--Zp3prtW.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList--Zp3prtW.js.gz: Error: Duplicate resources
+  [public/assets/InputNumber-6ajI72QI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/InputNumber-6ajI72QI.js	[public/assets/InputNumber-6ajI72QI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/InputNumber-6ajI72QI.js.gz: Error: Duplicate resources
+  [public/assets/follows-bIYto1Sp.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/follows-bIYto1Sp.js.gz	[public/assets/follows-bIYto1Sp.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/follows-bIYto1Sp.js: Error: Duplicate resources
+  [public/assets/Input-sVDYe7_n.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Input-sVDYe7_n.js.gz	[public/assets/Input-sVDYe7_n.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Input-sVDYe7_n.js: Error: Duplicate resources
+  [public/assets/MusicFullWrapper-w8SABAqk.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper-w8SABAqk.css	[public/assets/MusicFullWrapper-w8SABAqk.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper-w8SABAqk.css.gz: Error: Duplicate resources
+  [public/assets/Tabs-d5Wh9_3k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Tabs-d5Wh9_3k.js.gz	[public/assets/Tabs-d5Wh9_3k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/Tabs-d5Wh9_3k.js: Error: Duplicate resources
+  [public/assets/PlayBar-IdYzLz9-.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-IdYzLz9-.css.gz	[public/assets/PlayBar-IdYzLz9-.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayBar-IdYzLz9-.css: Error: Duplicate resources
+  [public/assets/DownloadPage-B9xvNWZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/DownloadPage-B9xvNWZU.js	[public/assets/DownloadPage-B9xvNWZU.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/DownloadPage-B9xvNWZU.js.gz: Error: Duplicate resources
+  [public/assets/MusicHook-B2GiFeXy.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicHook-B2GiFeXy.js.gz	[public/assets/MusicHook-B2GiFeXy.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicHook-B2GiFeXy.js: Error: Duplicate resources
+  [public/assets/SearchResult-CNG-AQik.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchResult-CNG-AQik.js	[public/assets/SearchResult-CNG-AQik.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/SearchResult-CNG-AQik.js.gz: Error: Duplicate resources
+  [public/assets/useProgressiveRender-Cbl41Njj.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/useProgressiveRender-Cbl41Njj.js	[public/assets/useProgressiveRender-Cbl41Njj.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/useProgressiveRender-Cbl41Njj.js.gz: Error: Duplicate resources
+  [public/assets/index-gO_GAknj.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-gO_GAknj.css.gz	[public/assets/index-gO_GAknj.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-gO_GAknj.css: Error: Duplicate resources
+  [public/assets/index-Ig0Zq1vF.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Ig0Zq1vF.js.gz	[public/assets/index-Ig0Zq1vF.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Ig0Zq1vF.js: Error: Duplicate resources
+  [public/assets/index-CRkIT443.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CRkIT443.js.gz	[public/assets/index-CRkIT443.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-CRkIT443.js: Error: Duplicate resources
+  [public/assets/detail-COYg78V2.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-COYg78V2.js.gz	[public/assets/detail-COYg78V2.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/detail-COYg78V2.js: Error: Duplicate resources
+  [public/assets/index-BHbz4ryX.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BHbz4ryX.js.gz	[public/assets/index-BHbz4ryX.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BHbz4ryX.js: Error: Duplicate resources
+  [public/assets/index-B9L4s004.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B9L4s004.css	[public/assets/index-B9L4s004.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B9L4s004.css.gz: Error: Duplicate resources
+  [public/assets/index-BMd4ek_6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BMd4ek_6.js.gz	[public/assets/index-BMd4ek_6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BMd4ek_6.js: Error: Duplicate resources
+  [public/assets/main-Bco1MTsi.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/main-Bco1MTsi.js.gz	[public/assets/main-Bco1MTsi.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/main-Bco1MTsi.js: Error: Duplicate resources
+  [public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js	[public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicFullWrapper.vue_vue_type_script_setup_true_lang-DUrI7zww.js.gz: Error: Duplicate resources
+  [public/assets/PlayingListDrawer-W1qWg4wx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-W1qWg4wx.js.gz	[public/assets/PlayingListDrawer-W1qWg4wx.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlayingListDrawer-W1qWg4wx.js: Error: Duplicate resources
+  [public/assets/PlaylistDrawer-BR3zonHI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlaylistDrawer-BR3zonHI.js	[public/assets/PlaylistDrawer-BR3zonHI.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/PlaylistDrawer-BR3zonHI.js.gz: Error: Duplicate resources
+  [public/assets/VirtualList-CAdgZr1k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList-CAdgZr1k.js.gz	[public/assets/VirtualList-CAdgZr1k.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/VirtualList-CAdgZr1k.js: Error: Duplicate resources
+  [public/assets/index-xewsvggO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-xewsvggO.js.gz	[public/assets/index-xewsvggO.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-xewsvggO.js: Error: Duplicate resources
+  [public/assets/HistoryRecommend-B-Hz57lf.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-B-Hz57lf.css.gz	[public/assets/HistoryRecommend-B-Hz57lf.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/HistoryRecommend-B-Hz57lf.css: Error: Duplicate resources
+  [public/assets/radio-J43Vwt68.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/radio-J43Vwt68.js.gz	[public/assets/radio-J43Vwt68.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/radio-J43Vwt68.js: Error: Duplicate resources
+  [public/assets/index-Cbj_Iyyf.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Cbj_Iyyf.js	[public/assets/index-Cbj_Iyyf.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-Cbj_Iyyf.js.gz: Error: Duplicate resources
+  [public/assets/index-B3ucylI1.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B3ucylI1.js	[public/assets/index-B3ucylI1.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-B3ucylI1.js.gz: Error: Duplicate resources
+  [public/assets/index-DCavg1h4.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DCavg1h4.css.gz	[public/assets/index-DCavg1h4.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DCavg1h4.css: Error: Duplicate resources
+  [public/assets/index-WBevoqqq.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-WBevoqqq.js	[public/assets/index-WBevoqqq.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-WBevoqqq.js.gz: Error: Duplicate resources
+  [public/assets/ImportPlaylist-BHk8PfB6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/ImportPlaylist-BHk8PfB6.js	[public/assets/ImportPlaylist-BHk8PfB6.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/ImportPlaylist-BHk8PfB6.js.gz: Error: Duplicate resources
+  [public/assets/index-59uEBLBg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-59uEBLBg.js	[public/assets/index-59uEBLBg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-59uEBLBg.js.gz: Error: Duplicate resources
+  [public/assets/MusicListPage-P_DVUcwN.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-P_DVUcwN.css	[public/assets/MusicListPage-P_DVUcwN.css] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/MusicListPage-P_DVUcwN.css.gz: Error: Duplicate resources
+  [public/assets/playbackController-D3PhDk45.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playbackController-D3PhDk45.js	[public/assets/playbackController-D3PhDk45.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/playbackController-D3PhDk45.js.gz: Error: Duplicate resources
+  [public/assets/index-BzC-6xCT.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BzC-6xCT.js	[public/assets/index-BzC-6xCT.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-BzC-6xCT.js.gz: Error: Duplicate resources
+  [public/assets/index-DQ8jU7Sg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DQ8jU7Sg.js	[public/assets/index-DQ8jU7Sg.js] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/assets/index-DQ8jU7Sg.js.gz: Error: Duplicate resources
+  [public/index.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/index.html.gz	[public/index.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/index.html: Error: Duplicate resources
+  [public/html/remote-control.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/html/remote-control.html.gz	[public/html/remote-control.html] /home/runner/work/AlgerMusicPlayer/AlgerMusicPlayer/android/app/src/main/assets/public/html/remote-control.html: Error: Duplicate resources
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 9s
+Error: Process completed with exit code 1.

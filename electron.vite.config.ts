@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import AutoImport from 'unplugin-auto-import/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 import Components from 'unplugin-vue-components/vite';
-import viteCompression from 'vite-plugin-compression';
+// import viteCompression from 'vite-plugin-compression'; // 禁用压缩以修复 Android 资源冲突
 import VueDevTools from 'vite-plugin-vue-devtools';
 
 export default defineConfig({
@@ -20,7 +20,7 @@ export default defineConfig({
     },
     plugins: [
       vue(),
-      viteCompression(),
+      // viteCompression(), // 禁用压缩以修复 Android 资源冲突 喵~
       VueDevTools(),
       AutoImport({
         imports: [

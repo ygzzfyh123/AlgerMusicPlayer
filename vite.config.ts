@@ -20,7 +20,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    viteCompression(),
+    // viteCompression(), // 禁用压缩以修复 Android 资源冲突 喵~
     VueDevTools(),
     AutoImport({
       imports: [

@@ -109,3 +109,13 @@ export const getSetData = (): any => {
   }
   return setData;
 };
+
+// 导出移动端配置
+export {
+  getCurrentApiConfig,
+  getDesktopApiConfig,
+  getMobileApiConfig,
+  isMobileEnvironment,
+  mobileCache,
+  mobileNetworkManager
+} from './mobileConfig';
