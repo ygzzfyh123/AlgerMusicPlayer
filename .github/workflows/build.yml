@@ -29,10 +29,20 @@ jobs:
           - id: linux
             os: ubuntu-latest
             build_command: npm run build:linux
+          - id: android
+            os: ubuntu-latest
+            build_command: npm run build:apk
 
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
+
+      - name: Set up JDK 24
+        if: matrix.id == 'android'
+        uses: actions/setup-java@v4
+        with:
+          java-version: '24'
+          distribution: 'oracle'
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -71,6 +81,7 @@ jobs:
             dist/*.AppImage
             dist/latest*.yml
             dist/*.blockmap
+            android/app/build/outputs/apk/release/*.apk
 
   release:
     needs: build
