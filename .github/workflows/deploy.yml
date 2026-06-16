@@ -6,11 +6,14 @@ on:
       - main # 或者您的主分支名称
   workflow_dispatch: # 允许手动触发
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
