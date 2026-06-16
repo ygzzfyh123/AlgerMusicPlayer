@@ -32,19 +32,31 @@ function aesEncrypt(text: string, key: string): string {
 }
 
 /**
+ * 快速幂算法 (取模幂)
+ * 用于解决 BigInt ** 导致的计算溢出/挂起问题
+ */
+function power(a: bigint, b: bigint, m: bigint): bigint {
+  let res = BigInt(1);
+  a %= m;
+  while (b > 0n) {
+    if (b % 2n === 1n) res = (res * a) % m;
+    a = (a * a) % m;
+    b /= 2n;
+  }
+  return res;
+}
+
+/**
  * 大数加密实现 (网易云专用)
  */
 function bignum_encrypt(text: string, pubKey: string, modulus: string): string {
-  // 这是一个针对网易云 RSA 逻辑的纯 JS 实现
   const rs = text.split('').reverse().join('');
-
-  // 模拟大数运算
   const biText = BigInt('0x' + CryptoJS.enc.Hex.stringify(CryptoJS.enc.Utf8.parse(rs)));
   const biPubKey = BigInt('0x' + pubKey);
   const biModulus = BigInt('0x' + modulus);
 
-  // (text ^ pubKey) % modulus
-  const biRet = biText ** biPubKey % biModulus;
+  // 使用快速幂进行 (text ^ pubKey) % modulus 运算
+  const biRet = power(biText, biPubKey, biModulus);
   let ret = biRet.toString(16);
   while (ret.length < 256) ret = '0' + ret;
   return ret;
