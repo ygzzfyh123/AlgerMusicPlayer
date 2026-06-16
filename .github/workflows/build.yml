@@ -55,7 +55,16 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: |
+          echo "========== 环境检查 =========="
+          echo "Node 版本: $(node --version)"
+          echo "npm 版本: $(npm --version)"
+          if [ "${{ matrix.id }}" == "android" ]; then
+            echo "Java 版本: $(java -version 2>&1 | head -n 1)"
+          fi
+          echo "========== 安装依赖 =========="
+          npm install --legacy-peer-deps
+          echo "✅ 依赖安装完成"
 
       - name: Install Linux build dependencies
         if: matrix.id == 'linux'
@@ -66,11 +75,28 @@ jobs:
       - name: Build Android APK
         if: matrix.id == 'android'
         run: |
+          echo "========== 开始前端编译 =========="
           npm run build
-          npx cap sync android
+          if [ ! -d "out/renderer" ]; then
+            echo "❌ 前端编译失败: out/renderer 目录不存在"
+            ls -la out/ 2>/dev/null || echo "out 目录不存在"
+            exit 1
+          fi
+          echo "✅ 前端编译成功"
+          echo "========== 同步 Capacitor =========="
+          npx cap sync android || exit 1
+          echo "✅ Capacitor 同步成功"
+          echo "========== 检查 Android 文件 =========="
+          ls -la android/app/src/main/assets/public/ || echo "assets 目录不存在"
+          echo "========== 编译 APK =========="
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease
+          ./gradlew clean assembleRelease || {
+            echo "❌ Gradle 编译失败"
+            echo "========== 错误日志 =========="
+            exit 1
+          }
+          echo "✅ APK 编译成功"
 
       - name: Build Desktop artifacts
         if: matrix.id != 'android'

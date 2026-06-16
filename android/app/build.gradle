@@ -44,6 +44,22 @@ dependencies {
 
 apply from: 'capacitor.build.gradle'
 
+// 删除 gzip 压缩文件以避免 Gradle 资源合并时的重复资源错误
+android.applicationVariants.all { variant ->
+    variant.mergeResources.doFirst {
+        // 清理 assets 中的 .gz 文件，保留原始文件即可
+        def assetsDir = file('src/main/assets/public')
+        if (assetsDir.exists()) {
+            assetsDir.eachFileRecurse { file ->
+                if (file.name.endsWith('.gz')) {
+                    file.delete()
+                    println("Deleted: ${file.path}")
+                }
+            }
+        }
+    }
+}
+
 try {
     def servicesJSON = file('google-services.json')
     if (servicesJSON.text) {
